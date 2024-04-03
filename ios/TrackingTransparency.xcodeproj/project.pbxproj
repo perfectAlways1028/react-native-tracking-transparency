@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-
 		5E555C0D2413F4C50049A1A2 /* TrackingTransparency.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* TrackingTransparency.m */; };
+		D7E3B3732BBDEF4600C97CF1 /* TrackingTransparency.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* TrackingTransparency.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,19 +21,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7E3B3752BBDEF4600C97CF1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libTrackingTransparency.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTrackingTransparency.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
-
 		B3E7B5881CC2AC0600A0062D /* TrackingTransparency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingTransparency.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* TrackingTransparency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TrackingTransparency.m; sourceTree = "<group>"; };
-
+		D7E3B3792BBDEF4600C97CF1 /* libTrackingTransparency-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libTrackingTransparency-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		58B511D81A9E6C8500147676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7E3B3742BBDEF4600C97CF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,12 +68,10 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
-
 				B3E7B5881CC2AC0600A0062D /* TrackingTransparency.h */,
 				B3E7B5891CC2AC0600A0062D /* TrackingTransparency.m */,
-
 				134814211AA4EA7D00B7C361 /* Products */,
+				D7E3B3792BBDEF4600C97CF1 /* libTrackingTransparency-tvOS.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +93,23 @@
 			name = TrackingTransparency;
 			productName = RCTDataManager;
 			productReference = 134814201AA4EA6300B7C361 /* libTrackingTransparency.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D7E3B3712BBDEF4600C97CF1 /* TrackingTransparency-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7E3B3762BBDEF4600C97CF1 /* Build configuration list for PBXNativeTarget "TrackingTransparency-tvOS" */;
+			buildPhases = (
+				D7E3B3722BBDEF4600C97CF1 /* Sources */,
+				D7E3B3742BBDEF4600C97CF1 /* Frameworks */,
+				D7E3B3752BBDEF4600C97CF1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TrackingTransparency-tvOS";
+			productName = RCTDataManager;
+			productReference = D7E3B3792BBDEF4600C97CF1 /* libTrackingTransparency-tvOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -112,6 +140,7 @@
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* TrackingTransparency */,
+				D7E3B3712BBDEF4600C97CF1 /* TrackingTransparency-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -121,10 +150,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-
 				5E555C0D2413F4C50049A1A2 /* TrackingTransparency.m in Sources */,
-
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7E3B3722BBDEF4600C97CF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7E3B3732BBDEF4600C97CF1 /* TrackingTransparency.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +271,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TrackingTransparency;
 				SKIP_INSTALL = YES;
-
 			};
 			name = Debug;
 		};
@@ -254,7 +287,40 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TrackingTransparency;
 				SKIP_INSTALL = YES;
-
+			};
+			name = Release;
+		};
+		D7E3B3772BBDEF4600C97CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D7E3B3782BBDEF4600C97CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -275,6 +341,15 @@
 			buildConfigurations = (
 				58B511F01A9E6C8500147676 /* Debug */,
 				58B511F11A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7E3B3762BBDEF4600C97CF1 /* Build configuration list for PBXNativeTarget "TrackingTransparency-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7E3B3772BBDEF4600C97CF1 /* Debug */,
+				D7E3B3782BBDEF4600C97CF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
